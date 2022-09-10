@@ -1,0 +1,37 @@
+@import "../../variables.module.scss";
+
+.pagination {
+  margin: 1.5rem 7px;
+
+  button {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: $mainColor;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    color: $textColor;
+    margin: 5px;
+  }
+  :hover {
+    color: $mainColor;
+    background-color: $textColor;
+  }
+  .no-hover {
+    display: inline-block;
+    color: $textColor;
+    background-color: $mainColor;
+    button {
+      margin: 0;
+    }
+
+    :hover {
+      background-color: $mainColor;
+      color: $textColor;
+    }
+  }
+  .current {
+    color: $mainColor;
+    background-color: $textColor;
+  }
+}

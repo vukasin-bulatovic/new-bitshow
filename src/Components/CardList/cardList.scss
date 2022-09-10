@@ -1,0 +1,100 @@
+@import "../../variables.module.scss";
+
+.cardlist-settings {
+  width: 100%;
+  background-color: $mainColor;
+  color: $textColor;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2%;
+  align-items: flex-end;
+
+  flex-grow: 1;
+  .sort-and-num-of-cards {
+    select {
+      background-color: $mainColor;
+      border: 0;
+      border-left: 1px solid $textColor;
+      color: $textColor;
+      margin-left: 1rem;
+    }
+    .num-of-cards-displaying {
+      margin-top: 1rem;
+      display: flex;
+    }
+    .settings-icon {
+      display: flex;
+      align-items: center;
+      margin-left: 0.7rem;
+    }
+  }
+  .settings {
+    background-color: $textColor;
+    color: $mainColor;
+    font-weight: 400;
+    border-top: 1px solid $textColor;
+    margin-top: -3px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    input {
+      width: 40px;
+      display: inline-block;
+      background-color: $mainColor;
+      color: $textColor;
+      border: 0;
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    button {
+      display: flex;
+      font-size: 1.1rem;
+      border: 0;
+      background-color: $textColor;
+      align-items: center;
+    }
+  }
+
+  .search {
+    margin-bottom: 2rem;
+  }
+
+  .pagination-div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+
+  @media (max-width: 1550px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1175px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  // @media (max-width: 1039px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+}
+
+.bottom-of-page {
+  width: 100%;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: center;
+  .pagination {
+    margin: 0;
+    padding-top: 1.5rem;
+  }
+}

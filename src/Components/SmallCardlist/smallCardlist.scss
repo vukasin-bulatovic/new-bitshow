@@ -1,0 +1,27 @@
+@import "../../variables.module.scss";
+
+.small-cardlist-search {
+  background-color: transparent;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-around;
+
+  .card {
+    width: 23%;
+
+    button {
+      font-size: 0.8rem;
+    }
+    font-size: 0.8rem;
+  }
+
+  .btn-small-cardlist {
+    height: 60px;
+    background-color: $mainColor;
+    color: $textColor;
+    width: 60px;
+    font-size: 2rem;
+    align-self: center;
+  }
+}

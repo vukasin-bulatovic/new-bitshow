@@ -1,0 +1,164 @@
+@import "../../variables.module.scss";
+
+.single-page-container {
+  background-color: $background;
+  color: $mainColor;
+
+  .top-of-single-page {
+    background-color: $textColor;
+    height: calc(100vh - 65px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1280px) {
+      height: calc(100vh - 57px);
+    }
+  }
+  .image-info {
+    .show-name {
+      display: none;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: $mainColor;
+    background-color: $textColor;
+
+    @media (max-width: 1280px) {
+      font-size: 2rem;
+    }
+  }
+
+  .main {
+    padding: 0 12%;
+
+    @media (max-width: 1600px) {
+      padding: 0 6%;
+    }
+    @media (max-width: 1280px) {
+      padding: 0 1%;
+    }
+
+    .more-by-genre {
+      .title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .icons {
+          display: flex;
+          align-items: center;
+          font-size: 1.5rem;
+          margin-left: 1rem;
+        }
+        .info {
+          font-size: 0.9rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .first {
+    margin-top: 2rem;
+  }
+  .title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    flex-grow: 0;
+    font-weight: 700;
+    color: $mainColor;
+
+    @media (max-width: 1600px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 1280px) {
+      font-size: 1.8rem;
+    }
+  }
+  .episodes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .single-episode {
+      width: 32%;
+    }
+  }
+  .cast-and-recent-episode {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 0;
+    margin-bottom: 2rem;
+    .cast-container {
+      width: 66%;
+      flex-grow: 0;
+      display: flex;
+      flex-direction: column;
+
+      .show-more {
+        text-align: center;
+        align-self: center;
+        width: 18%;
+        background-color: $mainColor;
+        color: $orange;
+        font-size: 1.5rem;
+        -webkit-clip-path: polygon(
+          50% 0%,
+          100% 0,
+          100% 60%,
+          85% 100%,
+          15% 100%,
+          0 60%,
+          0 0
+        );
+        clip-path: polygon(
+          50% 0%,
+          100% 0,
+          100% 60%,
+          85% 100%,
+          15% 100%,
+          0 60%,
+          0 0
+        );
+
+        @media (max-width: 1600px) {
+          font-size: 1.4rem;
+        }
+        @media (max-width: 1280px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      .cast {
+        // background-color: #593d3b;
+        color: $mainColor;
+        border: 3px solid $mainColor;
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $gray;
+        padding: 10px 15px;
+      }
+    }
+    .recent-episodes {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+
+      flex-grow: 0;
+
+      .single-episode {
+        margin-bottom: 2.8rem;
+      }
+    }
+  }
+}
+.cardlist-similar {
+  width: 80%;
+  margin: 0 auto;
+}

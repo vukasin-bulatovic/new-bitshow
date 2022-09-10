@@ -1,0 +1,99 @@
+@import "../../variables.module.scss";
+
+.header {
+  width: 100%;
+  height: 8vh;
+  padding-bottom: 0.5rem;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  .logo {
+    margin-left: 2%;
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      color: $textColor;
+    }
+  }
+  .buttons {
+    display: flex;
+
+    .watchlist-btn {
+      flex-grow: 0;
+      transition: width 0.5s ease-out;
+    }
+    .eye-btn {
+      margin-right: 2rem;
+    }
+
+    .watchlist-toggle-btn {
+      background-color: transparent;
+      border-color: $textColor;
+      padding: 5px;
+      border-radius: 20px;
+      color: wheat;
+      font-size: 1.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 40px;
+
+      .eye {
+        width: 30px;
+        font-size: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .number {
+        padding: 0 10px;
+      }
+    }
+
+    .search-button-container {
+      position: relative;
+
+      .search-list {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        background-color: $mainColor;
+        color: $textColor;
+        font-weight: 300;
+        padding: 0.2rem;
+        width: 75%;
+        border: 1px solid $textColor;
+        border-top: 0;
+        border-bottom: 0;
+        display: flex;
+        flex-direction: column;
+
+        .single-item {
+          border-bottom: 1px solid $textColor;
+          padding: 0.3rem 0;
+          :hover {
+            background-color: $textColor;
+            color: $mainColor;
+          }
+
+          a {
+            color: $textColor;
+            text-decoration: none;
+          }
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
